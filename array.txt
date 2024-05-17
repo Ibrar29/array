@@ -1,0 +1,121 @@
+// iterable object where use the for-of loop
+let arr =[];
+console.log(typeof arr);
+let fruit= ['apple','orange','mango','bananan'];
+console.log(fruit);
+            Accesssing element
+let fruit= ['apple','orange','mango','banana'];
+console.log(fruit[0]);
+console.log(fruit[1]);
+           Modifying element
+ let fruit= ['apple','orange','mango','banana'];
+ fruit[2] = "nuts";
+console.log(fruit);
+                 Array Traversal
+         for of loop                 
+let fruit= ['apple','orange','mango','banana','grapes'];
+for(let item of fruit){
+    console.log(item);
+}
+for (let item=0;item<fruit.length;item++){
+    console.log(fruit[item])
+}
+let car = ['mehran','gli','corola','marsidies']
+    for(let item of car){
+        console.log(item)
+    }
+     2nd method
+    for(let item=0;item<car.length;item++){
+        console.log(car[item])
+    }
+              for in loopp
+        for (let item in car){
+            console.log(item)
+        }
+           for each
+
+         fruit.forEach((curElem,index,arr) =>{
+           console.log(`${curElem} ${index}`)}
+          // console.log(arr)}
+ );
+           //map functio
+const myArr = fruit.map((curElem,index,arr)=>{
+ return`${curElem} ${index}`
+ }); console.log(myArr);
+
+ const number= [2,4,6,8,22];
+ number.forEach((curElem) => {
+    console.log(curElem*2)
+ });
+ const doubleValue = number.map((curElem)=>{
+    return curElem*2;
+
+ });
+ console.log(doubleValue);
+
+                           push return the new length
+ let fruit= ['apple','orange','mango','banana','grapes'];
+ console.log(fruit.push("mango"));
+ console.log(fruit);
+                        pop:
+//let fruit= ['apple','orange','mango','banana','grapes'];
+console.log(fruit.pop());
+console.log(fruit);
+                   unshift/shift:
+         let fruit= ['apple','orange','mango','banana','grapes'];
+console.log(fruit.unshift("watermelon"));
+console.log(fruit);
+console.log(fruit.shift());
+console.log(fruit);
+                      splice
+       let fruit= ['apple','orange','mango','banana','grapes'];
+       console.log(fruit.splice(1,1,"watermelon"));
+       console.log(fruit);
+                   searching an array
+                   index of
+const number=[1,2,3,4,5,6,7,8,9];
+ console.log(number.indexOf(4));
+ console.log(number);
+            // lastIndesof
+  const number1=[1,2,3,4,5,9,6,7,8,9];
+ const result =(number1.lastIndexOf(9));
+ console.log(result);
+let month = ['jan','feb','march','april'];
+console.log(month.push("dec"));
+console.log(month);
+month.splice(month.length,0,'dec');
+console.log(month);
+const indexUpdate = month.indexOf('feb');
+month.splice(indexUpdate,1,'FEB')
+const indexDelete = month.indexOf('march');
+month.splice(indexDelete,1);
+console.log(month);
+         Filter in Array
+            find method
+const number = [1,2,3,4,5,6,7,8,9]
+const result = number.find((currentElem)=>
+{
+return currentElem>6;
+});
+console.log(result);
+                find index method
+  const result1 = number.map((currentElem)=>{
+    return currentElem*5
+  },); console.log(result1);
+const result= result1.findIndex((currentElem)=>{
+return currentElem>10;
+}) 
+     console.log(result);    
+
+    filter method
+    const number = [1,2,3,4,5,6,7,8,9];
+    const result = number.filter((currentElem)=>{
+      return currentElem >5
+
+    }); console.log(result);
+    const number = [1,2,3,4,5,6,7,6,8,9];
+    let value =6;
+    let carttoUpdate = number.filter((currentElem)=>{
+      return currentElem !==value;
+    });
+    console.log(carttoUpdate);
